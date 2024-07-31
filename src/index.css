@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-green{
+  background-color: #4CAF50;
+  color : #ffffff;
+  border-radius : 15px;
+}
+
+.text-green{
+  color: #4CAF50;
+}
+
+.text-grey{
+  color : #4F4F4F;
+}
+
+.text-light-grey{
+  color : #9FA4B2;
+}
+
+.text-red{
+  color : #DE3E3E;
+}
+
+.text-small{
+  font-size: 12px;
+}
+
+.text-medium{
+  font-size: 14px;
+}
+
+.text-medium-large{
+  font-size: 16px;
+}
+
+.text-large{
+  font-size: 20px;
+}
+
+.text-large-xs{
+  font-size: 24px;
+}
+
+.text-extra-large{
+  font-size: 28px;
+}
+
+.wt-400{
+  font-weight: 400;
+}
+
+.wt-500{
+  font-weight: 500;
+}
+
+.wt-600{
+  font-weight: 600;
+}
+
+.wt-700{
+  font-weight: 700;
+}
+
+.wt-800{
+  font-weight: 800;
+}
+
+.wt-900{
+  font-weight: 900;
+}
+
+.wt-bold{
+  font-weight: bold;
+}
+
+.btn-green:hover{
+  background-color: #63b466;
+  color : #ffffff;
+  border-radius : 15px;
+}
+.p-x-50{
+  padding-left: 70px;
+  padding-right: 70px;
+}
