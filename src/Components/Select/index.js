@@ -4,7 +4,7 @@ import Select from 'react-select';
 
 export default function CustomSelect(props) {
     const {className = "",type = "text", name, value, onChange, placeholder, options = [], searchable = false} = props;
-    const [selectedOption, setSelectedOption] = useState(null);
+    // const [selectedOption, setSelectedOption] = useState(null);
     const style = {
         control: base => ({
             ...base,

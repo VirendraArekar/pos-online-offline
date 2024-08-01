@@ -27,8 +27,49 @@ export const getApi = async (url, query = {}) => {
     })
 }
 
-export const postApi = async (url, data = '') => {
-    await ApiInst.post(url, data).then(data => {
+export const postApi = async (url, data) => {
+    return await ApiInst.post(url, data).then(data => {
+        return data?.data;
+    }).catch(err => {
+        return err;
+    })
+}
+
+export const getApiById = async (url, id, query = {}) => {
+    query = createGetQuery(query);
+    await ApiInst.get(`${url}${query !== '' ? `?${query}` : query}/${id}`).then(data => {
+        return data;
+    }).catch(err => {
+        return err;
+    })
+}
+
+export const putApi = async (url, id, data) => {
+    await ApiInst.put(url, data).then(data => {
+        return data;
+    }).catch(err => {
+        return err;
+    })
+}
+
+export const patchApi = async (url, id, data) => {
+    await ApiInst.patch(url, data).then(data => {
+        return data;
+    }).catch(err => {
+        return err;
+    })
+}
+
+export const deleteApi = async (url, id) => {
+    await ApiInst.delete(`${url}/${id}`).then(data => {
+        return data;
+    }).catch(err => {
+        return err;
+    })
+}
+
+export const deleteMultiApi = async (url, ids) => {
+    await ApiInst.delete(url, ids).then(data => {
         return data;
     }).catch(err => {
         return err;

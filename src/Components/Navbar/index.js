@@ -8,6 +8,7 @@ import { CiMail } from "react-icons/ci";
 import { VscFilePdf } from "react-icons/vsc";
 import { IoShareSocialOutline } from "react-icons/io5";
 import {BiArrowBack} from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function index(props) {
   const { screen, onCustomerClick , onTicketClick, onProductClick, toggle = true} = props;
@@ -29,18 +30,18 @@ export default function index(props) {
           style={{ backgroundColor: navColor(screen) }}
         >
           <div className="container-fluid">
-            <a
+            <Link
               className="nav-link active fw-bold"
               aria-current="page"
-              href="#!"
+              to="#!"
               style={{ fontSize: font?.navTextSize }}
             >
               Orders
-            </a>
+            </Link>
 
             <div
               className="offcanvas offcanvas-end"
-              tabindex="-1"
+              tabIndex="-1"
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
             >
@@ -58,46 +59,46 @@ export default function index(props) {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1">
                   <li className="nav-item">
-                    <a
+                    <Link
                       className="nav-link active"
                       aria-current="page"
-                      href="#!"
+                      to="#!"
                     >
                       <FaClockRotateLeft size={24} color="#ffffff" />
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
+                    <Link
                       className="nav-link dropdown-toggle"
-                      href="#!"
+                      to="#!"
                       id="accountDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       <FiMoreHorizontal size={30} color="#ffffff" />
-                    </a>
+                    </Link>
                     <ul
                       className="dropdown-menu border-0 shadow bsb-zoomIn"
                       aria-labelledby="accountDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="#!">
+                        <Link className="dropdown-item" to="#!">
                           Log in
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#!">
+                        <Link className="dropdown-item" to="#!">
                           Lost Password?
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <hr className="dropdown-divider" />
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#!">
+                        <Link className="dropdown-item" to="#!">
                           Sign up
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -115,18 +116,18 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                <a
+                <Link
                   className="nav-link active fw-bold mx-3"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24 }}
                 >
                   <FaAlignLeft />
-                </a>
+                </Link>
                 <span className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
-                    href="#!"
+                    to="#!"
                     id="accountDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -134,35 +135,35 @@ export default function index(props) {
                     style={{ fontSize: 24, fontWeight: "500" }}
                   >
                     All Products
-                  </a>
+                  </Link>
                   <ul
                     className="dropdown-menu border-0 shadow bsb-zoomIn"
                     aria-labelledby="accountDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="#!" onClick={() => onProductClick('add')}>
+                      <Link className="dropdown-item" to="#!" onClick={() => onProductClick('add')}>
                         Add Product
-                      </a>
+                      </Link>
                     </li>
                     {/* <li>
-                      <a className="dropdown-item" href="#!">
+                      <Link className="dropdown-item" to="#!">
                         Lost Password?
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#!">
+                      <Link className="dropdown-item" to="#!">
                         Sign up
-                      </a>
+                      </Link>
                     </li> */}
                   </ul>
                 </span>
 
                 <div
                   className="offcanvas offcanvas-end"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
                 >
@@ -180,22 +181,22 @@ export default function index(props) {
                   <div className="offcanvas-body">
                     <ul className="navbar-nav justify-content-end flex-grow-1">
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsUpcScan size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item mx-2">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsSearch size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -207,25 +208,25 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                <a
+                <Link
                   className="nav-link active mx-2"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   Bills
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link active mx-0"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   <span className="border px-2">2</span>
-                </a>
+                </Link>
                 <div
                   className="offcanvas offcanvas-end"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
                 >
@@ -243,24 +244,24 @@ export default function index(props) {
                   <div className="offcanvas-body">
                     <ul className="navbar-nav justify-content-end flex-grow-1">
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                           onClick={() => onCustomerClick(true)}
                         >
                           <BsFillPersonPlusFill size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                           onClick={() => onTicketClick(true)}
                         >
                           <FaEllipsisVertical  size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -278,22 +279,22 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light py-2"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                <a
+                <Link
                   className="nav-link active fw-bold mx-3"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 27.5 }}
                 >
                   <FaAlignLeft size={24} color="#ffffff"/>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link active mx-2"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   Items
-                </a>
+                </Link>
               </nav>
             </div>
             <div className="col-sm-8 col-md-8 col-lg-8 m-0 p-0 border-start">
@@ -302,9 +303,9 @@ export default function index(props) {
                 style={{ backgroundColor: navColor(screen) }}
               >
                 <span className="nav-item dropdown mx-3">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
-                    href="#!"
+                    to="#!"
                     id="accountDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -312,35 +313,35 @@ export default function index(props) {
                     style={{ fontSize: 24, fontWeight: "500" }}
                   >
                     All Items
-                  </a>
+                  </Link>
                   <ul
                     className="dropdown-menu border-0 shadow bsb-zoomIn"
                     aria-labelledby="accountDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="#!">
+                      <Link className="dropdown-item" to="#!">
                         Log in
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#!">
+                      <Link className="dropdown-item" to="#!">
                         Lost Password?
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#!">
+                      <Link className="dropdown-item" to="#!">
                         Sign up
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </span>
 
                 <div
                   className="offcanvas offcanvas-end"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
                 >
@@ -358,22 +359,22 @@ export default function index(props) {
                   <div className="offcanvas-body">
                     <ul className="navbar-nav justify-content-end flex-grow-1">
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsUpcScan size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item me-2">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsSearch size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -392,22 +393,22 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light py-2"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                <a
+                <Link
                   className="nav-link active fw-bold mx-3"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 27.5 }}
                 >
                   <FaAlignLeft size={24} color="#ffffff"/>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link active mx-2"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   Settings
-                </a>
+                </Link>
               </nav>
             </div>
             <div className="col-sm-8 col-md-8 col-lg-8 m-0 p-0 border-start">
@@ -416,14 +417,14 @@ export default function index(props) {
                 style={{ backgroundColor: navColor(screen) }}
               >
 
-                <a
+                <Link
                   className="nav-link active mx-4"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" , lineHeight : 1.73}}
                 >
                   Store Information
-                </a>
+                </Link>
   
               </nav>
             </div>
@@ -439,24 +440,24 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light py-2 justify-content-between"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                <a
+                <Link
                   className="nav-link active fw-bold mx-3 py-1"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   
                 >
                   <FaAlignLeft size={24} color="#ffffff"/>
                   <span style={{ fontSize: 22, fontWeight: "500" }} className="px-3">Receipts</span>
-                </a>
+                </Link>
               
-                <a
+                <Link
                   className="nav-link active mx-3"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 22, fontWeight: "500" }}
                 >
                   <BsSearch size={24} color="#ffffff" />
-                </a>
+                </Link>
               </nav>
             </div>
             <div className="col-sm-8 col-md-8 col-lg-8 m-0 p-0 border-start">
@@ -465,23 +466,22 @@ export default function index(props) {
                 style={{ backgroundColor: navColor(screen) }}
               >
                 <span className="nav-item mx-3">
-                  <a
+                  <Link
                     className="nav-link "
-                    href="#!"
+                    to="#!"
                     id="accountDropdown"
                     role="button"
-                   
                     aria-expanded="false"
                     style={{ fontSize: 22, fontWeight: "500" }}
                   >
                    #TRX0101211113
-                  </a>
+                  </Link>
                  
                 </span>
 
                 <div
                   className="offcanvas offcanvas-end"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
                 >
@@ -500,58 +500,58 @@ export default function index(props) {
                     <ul className="navbar-nav justify-content-end flex-grow-1">
                       
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active text-light"
                           aria-current="page"
                           style={{fontSize : 22, fontWeight : 500}}
-                          href="#!"
+                          to="#!"
                         >
                           <IoShareSocialOutline   />
                           <span style={{fontSize : 13}} className="mx-1">Share</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active text-light"
                           aria-current="page"
                           style={{fontSize : 22, fontWeight : 500}}
-                          href="#!"
+                          to="#!"
                         >
                           <VscFilePdf  />
                           <span style={{fontSize : 13}} className="mx-1">Save as PDF</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <Link
                           className="nav-link active text-light"
                           aria-current="page"
                           style={{fontSize : 22, fontWeight : 500}}
-                          href="#!"
+                          to="#!"
                         >
                           <CiMail  />
                           <span style={{fontSize : 13}} className="mx-1">Share</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item me-3">
-                        <a
+                        <Link
                           className="nav-link active text-light"
                           aria-current="page"
                           style={{fontSize : 22, fontWeight : 500}}
-                          href="#!"
+                          to="#!"
                         >
                           <FaWhatsapp />
                           <span style={{fontSize : 13}} className="mx-1">Whatsapp</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item pe-3">
-                        <a
+                        <Link
                           className="nav-link active text-light"
                           aria-current="page"
                           style={{fontSize : 22, fontWeight : 500}}
-                          href="/refund-receipt"
+                          to="/refund-receipt"
                         >
                           REFUND
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -573,22 +573,22 @@ export default function index(props) {
                 className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light py-2"
                 style={{ backgroundColor: navColor(screen) }}
               >
-                {/* <a
+                {/* <Link
                   className="nav-link active fw-bold mx-3"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 27.5 }}
                 >
                   <FaAlignLeft size={24} color="#ffffff"/>
-                </a> */}
-                {/* <a
+                </Link> */}
+                {/* <Link
                   className="nav-link active mx-2"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   Items
-                </a> */}
+                </Link> */}
               </nav>
             </div>
             }
@@ -602,7 +602,7 @@ export default function index(props) {
 
                 <div
                   className="offcanvas offcanvas-end"
-                  tabindex="-1"
+                  tabIndex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
                 >
@@ -620,30 +620,30 @@ export default function index(props) {
                   <div className="offcanvas-body">
                     <ul className="navbar-nav justify-content-end flex-grow-1">
                       <li className="nav-item my-2">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsSearch size={24} color="#ffffff" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item me-1  my-2">
-                        <a
+                        <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                           style={{ position: 'relative' }}
                         >
                           <BsBell size={24} color="#ffffff" />
                           <span className="rounded-circle  bg-light align-middle" style={{ position: 'absolute', width: 12, height: 12, top: 0, right: 0 }}>4</span>
-                        </a>
+                        </Link>
                       </li>
                       <span className="nav-item dropdown mx-3 ms-0 text-light">
-                        <a
+                        <Link
                           className="nav-link"
                           // className="nav-link dropdown-toggle"
-                          href="#!"
+                          to="#!"
                           id="accountDropdown"
                           role="button"
                           data-bs-toggle="dropdown"
@@ -651,28 +651,28 @@ export default function index(props) {
                           style={{ fontSize: 24, fontWeight: "500" }}
                         >
                           <img src={require('../../Data/images/avatar.jpeg')} alt="my love" width="40" height={40} className="border rounded-circle" />
-                        </a>
+                        </Link>
                         <ul
                           className="dropdown-menu border-0 shadow bsb-zoomIn text-light"
                           aria-labelledby="accountDropdown"
                         >
                           <li>
-                            <a className="dropdown-item" href="#!">
+                            <Link className="dropdown-item" to="#!">
                               Log in
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#!">
+                            <Link className="dropdown-item" to="#!">
                               Lost Password?
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <hr className="dropdown-divider" />
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#!">
+                            <Link className="dropdown-item" to="#!">
                               Sign up
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </span>
@@ -694,22 +694,22 @@ export default function index(props) {
                     className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light py-2"
                     style={{ backgroundColor: navColor(screen) }}
                 >
-                  <a
+                  <Link
                   className="nav-link active fw-bold mx-3"
                   aria-current="page"
-                  href="/receipts"
+                  to="/receipts"
                   style={{ fontSize: 27.5 }}
                 >
                     <BiArrowBack size={24} color="#ffffff"/>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="nav-link active mx-2"
                   aria-current="page"
-                  href="#!"
+                  to="#!"
                   style={{ fontSize: 24, fontWeight: "500" }}
                 >
                   Receipts
-                </a>
+                </Link>
                 </nav>
               </div>
 

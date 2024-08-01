@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Login from './Screens/Auth/Login';
-import Register from './Screens/Auth/Register';
+// import Register from './Screens/Auth/Register';
 import ProtectedRoute from './Navigation/protectedRoute';
 import Dashboard from './Screens/Dashboard';
 import Bill from './Screens/Bill';
@@ -18,13 +18,14 @@ import Receipt from './Screens/Receipt';
 import Setting from './Screens/Setting';
 import RefundReceipt from './Screens/Receipt/Refund';
 import AdminPanel from './Screens/Admin';
-import Panel from './Screens/Panel';
+// import Panel from './Screens/Panel';
 import Modifiers from './Screens/Modifier';
-import ModifyModifier from './Screens/Modifier/create';
+import { ToastContainer } from 'react-toastify';
 import './index.css';
 import "@fontsource/rubik"; // Defaults to weight 400
 import "@fontsource/rubik/400.css"; // Specify weight
 import "@fontsource/rubik/400-italic.css"; // Specify weight and style
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -148,6 +149,18 @@ root.render(
                 />
             </Routes>
         </BrowserRouter>
+        <ToastContainer 
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
     </React.StrictMode>
 );
 

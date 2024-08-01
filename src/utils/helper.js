@@ -61,7 +61,7 @@ export const setLocalData = async (key, val, isObj = false) => {
 }
 
 export const getLocalData = async (key, isObj = false) => {
-    return await JSON.parse(localStorage.getItem(key));
+    return await isObj ? JSON.parse(localStorage.getItem(key)) : localStorage.getItem(key);
 }
 
 export const createGetQuery = (queryObj) => {

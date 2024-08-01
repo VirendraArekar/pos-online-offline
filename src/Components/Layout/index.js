@@ -1,6 +1,8 @@
+import { Link, redirect, useNavigate } from "react-router-dom";
 import "./style.css";
 
 export default function Layout(props) {
+  let navigate = useNavigate(); 
   const {doCompress = false}  = props;
   const toggleClick = () => {
   
@@ -17,19 +19,19 @@ export default function Layout(props) {
             <i className="lni lni-grid-alt"></i>
           </button>
           <div className="sidebar-logo">
-            <a href="#">Pos</a>
+            <Link to="#">Pos</Link>
           </div>
         </div>
         <ul className="sidebar-nav">
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-home"></i>
               <span>Home</span>
-            </a>
+            </Link>
           </li>
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#master"
@@ -38,37 +40,37 @@ export default function Layout(props) {
             >
               <i className="lni lni-archive"></i>
               <span>Masters</span>
-            </a>
+            </Link>
             <ul
               id="master"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   POS Devices
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Dining Options
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Payment Types
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Other Charges On Bill
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#manage"
@@ -77,54 +79,54 @@ export default function Layout(props) {
             >
               <i className="lni lni-layout"></i>
               <span>Inventory Management</span>
-            </a>
+            </Link>
             <ul
               id="manage"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Items
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Categories
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Discounts
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   MOdifiers
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Tax
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-rupee"></i>
               <span>Bills</span>
-            </a>
+            </Link>
           </li>
           {/* <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-agenda"></i>
               <span>Task</span>
-            </a>
+            </Link>
           </li> */}
           {/* <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#auth"
@@ -133,27 +135,27 @@ export default function Layout(props) {
             >
               <i className="lni lni-protection"></i>
               <span>Auth</span>
-            </a>
+            </Link>
             <ul
               id="auth"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Register
-                </a>
+                </Link>
               </li>
             </ul>
           </li> */}
           {/* <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#multi"
@@ -162,15 +164,15 @@ export default function Layout(props) {
             >
               <i className="lni lni-layout"></i>
               <span>General</span>
-            </a>
+            </Link>
             <ul
               id="multi"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="sidebar-link collapsed"
                   data-bs-toggle="collapse"
                   data-bs-target="#multi-two"
@@ -178,20 +180,20 @@ export default function Layout(props) {
                   aria-controls="multi-two"
                 >
                   Two Links
-                </a>
+                </Link>
                 <ul
                   id="multi-two"
                   className="sidebar-dropdown list-unstyled collapse"
                 >
                   <li className="sidebar-item">
-                    <a href="#" className="sidebar-link">
+                    <Link to="#" className="sidebar-link">
                       Link 1
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar-item">
-                    <a href="#" className="sidebar-link">
+                    <Link to="#" className="sidebar-link">
                       Link 2
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -199,8 +201,8 @@ export default function Layout(props) {
           </li> */}
 
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#general"
@@ -209,43 +211,43 @@ export default function Layout(props) {
             >
               <i className="lni lni-cog"></i>
               <span>General</span>
-            </a>
+            </Link>
             <ul
               id="general"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link t0="#" className="sidebar-link">
                   Employees
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Roles
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Customer Management
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Audits
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Subscription
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
 
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#report"
@@ -254,57 +256,62 @@ export default function Layout(props) {
             >
               <i className="lni lni-bar-chart"></i>
               <span>Reports</span>
-            </a>
+            </Link>
             <ul
               id="report"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Employees
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Roles
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Customer Management
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Audits
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Subscription
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           {/* <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-popup"></i>
               <span>Notification</span>
-            </a>
+            </Link>
           </li>
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-cog"></i>
               <span>Setting</span>
-            </a>
+            </Link>
           </li> */}
         </ul>
         <div className="sidebar-footer">
-          <a href="#" className="sidebar-link">
+          <Link to="#" className="sidebar-link" onClick={(e) => {
+            e.preventDefault();
+            localStorage.clear();
+            console.log('Clear')
+            navigate('/login')
+          }}>
             <i className="lni lni-exit"></i>
             <span>Logout</span>
-          </a>
+          </Link>
         </div>
       </aside>
       <div className="main p-0 m-0">

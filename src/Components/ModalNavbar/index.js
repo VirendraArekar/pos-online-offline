@@ -4,9 +4,10 @@ import { BiArrowBack } from "react-icons/bi";
 import { FiTrash } from "react-icons/fi";
 import { HiOutlineDocument } from "react-icons/hi2";
 import { HiOutlineUserAdd } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 export default function index(props) {
-  const {name, action, onChange = null, changeAction} = props;
+  const {name, action, changeAction} = props;
   return (
     <>
       {
@@ -15,26 +16,26 @@ export default function index(props) {
         className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
         style={{ backgroundColor: '#4CAF50' }}
             >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 24, fontWeight: "500" }}
             >
                 <BiArrowBack size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 20, fontWeight: "500" }}
             >
                 Add customer to Bill
-            </a>
+            </Link>
            
             <div
                 className="offcanvas offcanvas-end"
-                tabindex="-1"
+                tabIndex="-1"
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
             >
@@ -52,22 +53,22 @@ export default function index(props) {
                 <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 mx-2">
                     <li className="nav-item">
-                    <a
+                    <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsUpcScan size={24} color="#ffffff" />
-                    </a>
+                    </Link>
                     </li>
                     <li className="nav-item">
-                    <a
+                    <Link
                           className="nav-link active"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           <BsSearch size={24} color="#ffffff" />
-                     </a>
+                     </Link>
                     </li>
                 </ul>
                 </div>
@@ -81,22 +82,22 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
               style={{ backgroundColor: '#4CAF50' }}
           >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 24, fontWeight: "500" }}
             >
               <BiArrowBack size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 20, fontWeight: "500" }}
             >
               {props?.title}
-            </a>
+            </Link>
 
 
           </nav>
@@ -107,26 +108,26 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
               style={{ backgroundColor: '#4CAF50' }}
           >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 24, fontWeight: "500" }}
             >
               <BiArrowBack size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 20, fontWeight: "500" }}
             >
               Add Bill To
-            </a>
+            </Link>
 
             <div
                 className="offcanvas offcanvas-end"
-                tabindex="-1"
+                tabIndex="-1"
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
             >
@@ -162,22 +163,22 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
               style={{backgroundColor: '#4CAF50'}}
           >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 24, fontWeight: "500"}}
             >
               <BiArrowBack size={24}/>
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 20, fontWeight: "500"}}
             >
               Open Tickets
-            </a>
+            </Link>
 
             {
                 action !== null &&
@@ -201,14 +202,14 @@ export default function index(props) {
                   <div className="offcanvas-body">
                     <ul className="navbar-nav justify-content-end flex-grow-1 mx-2">
                       <li className="nav-item">
-                        <a
+                        <Link
                             className="nav-link active mx-2"
                             aria-current="page"
-                            href="#!"
+                            to="#!"
                         >
                           <FiTrash size={24} color="#ffffff"/>
                           {/*<BsUpcScan size={24} color="#ffffff"/>*/}
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
                         <button
@@ -221,14 +222,14 @@ export default function index(props) {
                         </button>
                       </li>
                       <li className="nav-item">
-                        <a
+                        <Link
                             className="nav-link active mx-2"
                             aria-current="page"
-                            href="#!"
+                            to="#!"
                         >
                           <HiOutlineUserAdd size={24} color="#ffffff"/>
                           {/*<BsSearch size={24} color="#ffffff"/>*/}
-                        </a>
+                        </Link>
                       </li>
 
                     </ul>
@@ -244,22 +245,22 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
               style={{backgroundColor: '#4CAF50'}}
           >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 24, fontWeight: "500"}}
             >
               <BiArrowBack size={24}/>
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 20, fontWeight: "500"}}
             >
               Edit Ticket
-            </a>
+            </Link>
 
             {
                 action !== null &&
@@ -304,26 +305,26 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
               style={{backgroundColor: '#4CAF50'}}
           >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 24, fontWeight: "500"}}
             >
               <BiArrowBack size={24}/>
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{fontSize: 20, fontWeight: "500"}}
             >
               {action} Product
-            </a>
+            </Link>
 
             <div
                 className="offcanvas offcanvas-end"
-                tabindex="-1"
+                tabIndex="-1"
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
             >
@@ -341,13 +342,13 @@ export default function index(props) {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 mx-2">
                   <li className="nav-item">
-                    <a
+                    <Link
                         className="nav-link active text-light"
                         aria-current="page"
-                        href="#!"
+                        to="#!"
                     >
                       Save
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -361,26 +362,26 @@ export default function index(props) {
               className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
         style={{ backgroundColor: '#4CAF50' }}
             >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 24, fontWeight: "500" }}
             >
                 <BiArrowBack size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 20, fontWeight: "500" }}
             >
                 {action} Customer Profile
-            </a>
+            </Link>
            
             <div
                 className="offcanvas offcanvas-end"
-                tabindex="-1"
+                tabIndex="-1"
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
             >
@@ -398,13 +399,13 @@ export default function index(props) {
                 <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 mx-2">
                     <li className="nav-item">
-                    <a
+                    <Link
                           className="nav-link active text-light"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           Add To Bill
-                    </a>
+                    </Link>
                     </li>
                 </ul>
                 </div>
@@ -418,26 +419,26 @@ export default function index(props) {
         className="navbar navbar-expand-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret text-light"
         style={{ backgroundColor: '#4CAF50' }}
             >
-            <a
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 24, fontWeight: "500" }}
             >
                 <BiArrowBack size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
                 className="nav-link active mx-2"
                 aria-current="page"
-                href="#!"
+                to="#!"
                 style={{ fontSize: 20, fontWeight: "500" }}
             >
                 Edit Customer
-            </a>
+            </Link>
            
             <div
                 className="offcanvas offcanvas-end"
-                tabindex="-1"
+                tabIndex="-1"
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
             >
@@ -455,13 +456,13 @@ export default function index(props) {
                 <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 mx-2">
                     <li className="nav-item">
-                    <a
+                    <Link
                           className="nav-link active text-light"
                           aria-current="page"
-                          href="#!"
+                          to="#!"
                         >
                           UPDATE
-                    </a>
+                    </Link>
                     </li>
                 </ul>
                 </div>

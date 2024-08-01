@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function Panel(props) {
@@ -12,25 +13,25 @@ export default function Panel(props) {
             <i className="lni lni-grid-alt"></i>
           </button>
           <div className="sidebar-logo">
-            <a href="#">CodzSword</a>
+            <Link to="#">CodzSword</Link>
           </div>
         </div>
         <ul className="sidebar-nav">
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-user"></i>
               <span>Profile</span>
-            </a>
+            </Link>
           </li>
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-agenda"></i>
               <span>Task</span>
-            </a>
+            </Link>
           </li>
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#auth"
@@ -39,27 +40,27 @@ export default function Panel(props) {
             >
               <i className="lni lni-protection"></i>
               <span>Auth</span>
-            </a>
+            </Link>
             <ul
               id="auth"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="sidebar-item">
-                <a href="#" className="sidebar-link">
+                <Link to="#" className="sidebar-link">
                   Register
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="sidebar-item">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#multi"
@@ -68,15 +69,15 @@ export default function Panel(props) {
             >
               <i className="lni lni-layout"></i>
               <span>Multi Level</span>
-            </a>
+            </Link>
             <ul
               id="multi"
               className="sidebar-dropdown list-unstyled collapse"
               data-bs-parent="#sidebar"
             >
               <li className="sidebar-item">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="sidebar-link collapsed"
                   data-bs-toggle="collapse"
                   data-bs-target="#multi-two"
@@ -84,43 +85,43 @@ export default function Panel(props) {
                   aria-controls="multi-two"
                 >
                   Two Links
-                </a>
+                </Link>
                 <ul
                   id="multi-two"
                   className="sidebar-dropdown list-unstyled collapse"
                 >
                   <li className="sidebar-item">
-                    <a href="#" className="sidebar-link">
+                    <Link to="#" className="sidebar-link">
                       Link 1
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar-item">
-                    <a href="#" className="sidebar-link">
+                    <Link to="#" className="sidebar-link">
                       Link 2
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-popup"></i>
               <span>Notification</span>
-            </a>
+            </Link>
           </li>
           <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
+            <Link to="#" className="sidebar-link">
               <i className="lni lni-cog"></i>
               <span>Setting</span>
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="sidebar-footer">
-          <a href="#" className="sidebar-link">
+          <Link to="#" className="sidebar-link">
             <i className="lni lni-exit"></i>
             <span>Logout</span>
-          </a>
+          </Link>
         </div>
       </aside>
       <div className="main p-0 m-0">
